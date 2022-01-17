@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Header from './Header/Header'
 //import ImageUploadForm from './ImageUploadForm/ImageUploadForm'

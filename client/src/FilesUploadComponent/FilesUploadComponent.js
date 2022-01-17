@@ -24,7 +24,8 @@ export default class FilesUploadComponent extends Component {
         formData.append('profileImg', this.state.profileImg)
         axios.post("http://localhost:4000/api/user-profile", formData, {
         }).then(res => {
-            console.log(res)
+            console.log(res);
+            this.setState({ profileImg: res.data.userCreated.profileImg })
         })
     }
 
@@ -37,6 +38,7 @@ export default class FilesUploadComponent extends Component {
                         <div className="form-group">
                             <input type="file" onChange={this.onFileChange} />
                         </div>
+                        <img src={this.state.profileImg}></img>
                         <div className="form-group">
                             <button className="btn btn-primary" type="submit">Upload</button>
                         </div>
