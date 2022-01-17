@@ -18,11 +18,6 @@ const UploadForm = () => {
 
   return (
     <div className="upload-form-for-custom-image">
-       <form class="mt-4"
-            action="/upload"
-            method="POST"
-            enctype="multipart/form-data"
-          ></form>
       <input type="file" multiple accept="image/*" onChange={onImageChange}/>
       { imageURLs.map(imageSrc => <img src={imageSrc} alt ="" />) }
     </div>

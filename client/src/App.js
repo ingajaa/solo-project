@@ -7,10 +7,11 @@ import Header from './Header/Header'
 //import UploadForm2 from './UploadForm2/UploadForm2'
 //import { PDFViewer } from '@react-pdf/renderer';
 //import PdfRender from './PdfRender'
-import PDFPrint from './PDFPrint/PDFPrint'
+import PDFPrint from './PDFPrint/PDFPrint';
 
 
 function App() {
+
 
   return (
     <div className="App">

@@ -12,7 +12,7 @@ const PDFPrint = () => {
   return (
     <div>
       <MonthlyCalendar ref={componentRef} />
-      <button onClick={handlePrint}>Print this out!</button>
+      <button className="send-to-print-button" onClick={handlePrint}>I'm happy with my design, send to print</button>
     </div>
   )
 }
