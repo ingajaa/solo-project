@@ -4,3 +4,9 @@
       display: none;
   }
 }
+
+@media screen {
+  .image-to-print {
+    max-width: 600px;
+  }
+}
