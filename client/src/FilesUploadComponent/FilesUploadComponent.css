@@ -10,3 +10,13 @@
     max-width: 630px;
   }
 }
+
+.actual-btn {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  color: transparent;
+  margin: 0.5rem 1rem;
+  background: transparent;
+}
+

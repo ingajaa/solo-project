@@ -1,14 +1,9 @@
 import React from 'react';
+import { Routes, Route} from "react-router-dom";
+import WrapperComponent from './WrapperComponent/WrapperComponent'
+import WelcomePage from './WelcomePage/WelcomePage'
 import './App.css';
-import Header from './Header/Header'
-//import ImageUploadForm from './ImageUploadForm/ImageUploadForm'
-//import MonthlyCalendar from './MonthlyCalendar/MonthlyCalendar'
-//import YearlyCalendar from './YearlyCalendar/YearlyCalendar'
-//import TheCalendar from './TheCalendar/TheCalendar'
-//import UploadForm2 from './UploadForm2/UploadForm2'
-//import { PDFViewer } from '@react-pdf/renderer';
-//import PdfRender from './PdfRender'
-import PDFPrint from './PDFPrint/PDFPrint';
+
 
 
 function App() {
@@ -16,8 +11,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <PDFPrint />
+       <Routes>
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="about" element={<WrapperComponent />} />
+      </Routes>
+
     </div>
   );
 }

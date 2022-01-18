@@ -14,7 +14,6 @@ const FilesUploadComponent = () => {
 
     const onFileChange = (e) => {
         const profileImg = e.target.files[0];
-        //setProfileImg(profileImg);
 
         e.preventDefault()
         const formData = new FormData()
@@ -31,10 +30,9 @@ const FilesUploadComponent = () => {
     return (
         <div className="container">
             <div className="row">
-                {/* <form onSubmit={(e)=> e.preventDefault()}></form> */}
                 <form onSubmit={(e)=> e.preventDefault()}>
                     <div className="form-group noprint">
-                        <input type="file" onChange={onFileChange} />
+                        <input type="file" className="actual-btn" onChange={onFileChange} />
                     </div>
                     {profileImg ?
                         <img className="image-to-print" src={profileImg} alt="Your custom background displayed"></img>

@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   padding: 60px 60px 60px 60px;
-  margin: 40px 40px 40px 40px;
+  margin: 40px 40px 0px 40px;
   border: 1px solid lightgrey;
   border-color: lightgrey
 }

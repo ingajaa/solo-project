@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+.first-page-container {
+  display: flex;
+  justify-content: center;
+  padding: 80px 300px 100px 300px;
+  margin: 100px 150px 50px 150px;
+  border: 1px solid rgb(245, 244, 244);
+  border-radius: 10px;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(245, 244, 244);
+  font-family: 'Dosis', sans-serif;
+  font-size: 25px
+}
+
+.first-page-container::after {
+  content: "";
+  background-image: url('Image/Floral-vector-pattern-with-hand-drawn-roses-for-design.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+
+}
+
+.activity-list{
+  padding: 40px 20px 20px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.welcome-headline {
+  font-size: 30px;
+  font-family: 'Dosis', sans-serif;
+}
+
+.personalize-link{
+  color: rgb(145, 60, 74)
+}
