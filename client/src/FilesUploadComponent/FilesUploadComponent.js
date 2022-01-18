@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './FilesUploadComponent.css'
 
-export default (props) => {
+const FilesUploadComponent = () => {
     const [profileImg, setProfileImg] = useState();
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export default (props) => {
 
     const onFileChange = (e) => {
         const profileImg = e.target.files[0];
-        setProfileImg(profileImg);
+        //setProfileImg(profileImg);
 
         e.preventDefault()
         const formData = new FormData()
@@ -22,6 +22,8 @@ export default (props) => {
         axios.post("http://localhost:4000/api/user-profile", formData, {
         }).then(res => {
             setProfileImg(res.data.userCreated.profileImg)
+        }).catch ((error) => {
+            console.log(error)
         })
     }
 
@@ -29,15 +31,18 @@ export default (props) => {
     return (
         <div className="container">
             <div className="row">
-                <form>
+                {/* <form onSubmit={(e)=> e.preventDefault()}></form> */}
+                <form onSubmit={(e)=> e.preventDefault()}>
                     <div className="form-group noprint">
                         <input type="file" onChange={onFileChange} />
                     </div>
                     {profileImg ?
-                        <img className="image-to-print" src={profileImg} alt="Something"></img>
+                        <img className="image-to-print" src={profileImg} alt="Your custom background displayed"></img>
                         : null}
                 </form>
             </div>
         </div>
     )
 }
+
+export default FilesUploadComponent

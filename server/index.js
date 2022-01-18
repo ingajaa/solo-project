@@ -6,7 +6,7 @@ let express = require('express'),
 
 const api = require('./routes/router.js')
 
-// MongoDB Configuration
+
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.db, {
     useNewUrlParser: true
@@ -35,7 +35,6 @@ const server = app.listen(port, () => {
 })
 
 app.use((req, res, next) => {
-    // Error goes via `next()` method
     setImmediate(() => {
         next(new Error('Something went wrong'));
     });

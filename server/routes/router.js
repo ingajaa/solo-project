@@ -3,8 +3,9 @@ const multer = require('multer');
 const mongoose = require('mongoose');
 const { v4: uuidv4 } = require('uuid');
 const router = express.Router();
-
+const User = require('../models/user');
 const DIR = './public/uploaded';
+
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -28,22 +29,20 @@ var upload = multer({
     }
 });
 
-// User model
-let User = require('../models/user');
+
+
 
 router.post('/user-profile', upload.single('profileImg'), async (req, res, next) => {
     const url = req.protocol + '://' + req.get('host')
     const user = new User({
         _id: new mongoose.Types.ObjectId(),
-        //name: req.body.name,
         profileImg: url + '/public/uploaded/' + req.file.filename
     });
 
     try {
-        //await User.deleteMany({});
         const result = await user.save()
         res.status(201).json({
-            message: "User registered successfully!",
+            message: "Photo uploaded successfully!",
             userCreated: {
                 _id: result._id,
                 profileImg: result.profileImg
@@ -60,7 +59,7 @@ router.post('/user-profile', upload.single('profileImg'), async (req, res, next)
 router.get("/", (req, res, next) => {
     User.find().then(data => {
         res.status(200).json({
-            message: "User list retrieved successfully!",
+            message: "Photo retrieved successfully!",
             users: data
         });
     });

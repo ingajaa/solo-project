@@ -1,7 +1,6 @@
 import React from 'react'
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
 import './MonthlyCalendar.css'
-import UploadForm from '../UploadForm/UploadForm'
 import FilesUploadComponent from '../FilesUploadComponent/FilesUploadComponent'
 
 const MonthlyCalendar = React.forwardRef((props, ref) => {
@@ -15,7 +14,6 @@ const month = date.getMonth();
 return (
   <div ref={ref} className="monthly-calendar-component">
     <FilesUploadComponent />
-    {/* <UploadForm /> */}
     <CalendarComponent value={dateValue}
     min={startDate}
     isMultiSelection={true}
