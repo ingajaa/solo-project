@@ -15,7 +15,7 @@ const month = date.getMonth();
 return (
   <div ref={ref} className="monthly-calendar-component">
     <FilesUploadComponent />
-    <UploadForm />
+    {/* <UploadForm /> */}
     <CalendarComponent value={dateValue}
     min={startDate}
     isMultiSelection={true}

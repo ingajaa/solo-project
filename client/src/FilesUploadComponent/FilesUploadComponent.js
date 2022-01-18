@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './FilesUploadComponent.css'
 
 export default class FilesUploadComponent extends Component {
 
@@ -7,24 +8,28 @@ export default class FilesUploadComponent extends Component {
         super(props);
 
         this.onFileChange = this.onFileChange.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             profileImg: ''
         }
     }
 
-    onFileChange(e) {
-        this.setState({ profileImg: e.target.files[0] })
+    componentDidMount() {
+                fetch('http://localhost:4000/api/').then(res => res.json()).then(data => {
+            const lastUser = data.users[data.users.length - 1];
+            this.setState({ profileImg: lastUser?.profileImg });
+        });
     }
 
-    onSubmit(e) {
+    onFileChange(e) {
+        const profileImg = e.target.files[0];
+        this.setState({ profileImg })
+
         e.preventDefault()
         const formData = new FormData()
-        formData.append('profileImg', this.state.profileImg)
+        formData.append('profileImg', profileImg)
         axios.post("http://localhost:4000/api/user-profile", formData, {
         }).then(res => {
-            console.log(res);
             this.setState({ profileImg: res.data.userCreated.profileImg })
         })
     }
@@ -34,14 +39,11 @@ export default class FilesUploadComponent extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    <form onSubmit={this.onSubmit}>
-                        <div className="form-group">
+                    <form>
+                        <div className="form-group noprint">
                             <input type="file" onChange={this.onFileChange} />
                         </div>
-                        <img src={this.state.profileImg}></img>
-                        <div className="form-group">
-                            <button className="btn btn-primary" type="submit">Upload</button>
-                        </div>
+                        <img src={this.state.profileImg} style={{maxWidth: '200px'}} alt="Something"></img>
                     </form>
                 </div>
             </div>

@@ -31,14 +31,17 @@ var upload = multer({
 // User model
 let User = require('../models/user');
 
-router.post('/user-profile', upload.single('profileImg'), (req, res, next) => {
+router.post('/user-profile', upload.single('profileImg'), async (req, res, next) => {
     const url = req.protocol + '://' + req.get('host')
     const user = new User({
         _id: new mongoose.Types.ObjectId(),
-        name: req.body.name,
+        //name: req.body.name,
         profileImg: url + '/public/' + req.file.filename
     });
-    user.save().then(result => {
+
+    try {
+        //await User.deleteMany({});
+        const result = await user.save()
         res.status(201).json({
             message: "User registered successfully!",
             userCreated: {
@@ -46,12 +49,12 @@ router.post('/user-profile', upload.single('profileImg'), (req, res, next) => {
                 profileImg: result.profileImg
             }
         })
-    }).catch(err => {
+    } catch (err) {
         console.log(err),
             res.status(500).json({
                 error: err
             });
-    })
+    }
 })
 
 router.get("/", (req, res, next) => {
