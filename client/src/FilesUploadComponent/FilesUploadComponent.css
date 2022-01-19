@@ -8,7 +8,15 @@
 @media screen {
   .image-to-print {
     max-width: 630px;
+    padding: 0;
+    margin: 0;
   }
+}
+
+.image-to-print {
+  max-width: 630px;
+  padding: 0;
+  margin: 0;
 }
 
 .actual-btn {
@@ -18,5 +26,14 @@
   color: transparent;
   margin: 0.5rem 1rem;
   background: transparent;
+}
+
+form {
+  margin: 0;
+  padding: 0
+}
+.form-around-uploaded-image {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
 }
 

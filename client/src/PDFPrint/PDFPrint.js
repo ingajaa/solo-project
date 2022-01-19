@@ -10,7 +10,7 @@ const PDFPrint = () => {
   })
 
   return (
-    <div>
+    <div className="container-for-calendar-and-photo-upload">
       <MonthlyCalendar ref={componentRef} />
       <button className="send-to-print-button" onClick={handlePrint}>I'm happy with my design, send to print</button>
     </div>

@@ -1,7 +1,11 @@
 .send-to-print-button {
-  margin: 40px 10px 10px 10px;
+  margin: 0 10px 10px 10px;
   border-color: rgb(245, 242, 242);
   border-radius: 5px;
   padding: 5px 15px 5px 15px;
   background-color: rgb(250,242,242);
+}
+
+.container-for-calendar-and-photo-upload {
+  margin-bottom: 0
 }

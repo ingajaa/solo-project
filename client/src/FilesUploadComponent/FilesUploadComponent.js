@@ -30,7 +30,7 @@ const FilesUploadComponent = () => {
     return (
         <div className="container">
             <div className="row">
-                <form onSubmit={(e)=> e.preventDefault()}>
+                <form className="form-around-uploaded-image" onSubmit={(e)=> e.preventDefault()}>
                     <div className="form-group noprint">
                         <input type="file" className="actual-btn" onChange={onFileChange} />
                     </div>

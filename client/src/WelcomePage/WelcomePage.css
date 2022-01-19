@@ -3,8 +3,8 @@
 .first-page-container {
   display: flex;
   justify-content: center;
-  padding: 80px 300px 100px 300px;
-  margin: 100px 150px 50px 150px;
+  padding: 60px 300px 100px 300px;
+  margin: 65px 150px 50px 150px;
   border: 1px solid rgb(245, 244, 244);
   border-radius: 10px;
   flex-direction: column;
@@ -37,6 +37,10 @@
   justify-content: center;
   flex-direction: column;
   text-align: left;
+}
+
+.mycal-design-caption {
+  color: rgb(145, 60, 74)
 }
 
 .welcome-headline {

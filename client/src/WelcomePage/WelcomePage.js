@@ -7,14 +7,19 @@ const WelcomePage = () => {
     <>
     <p className="first-page-container">
     <main>
-      <h3 className="welcome-headline">What can you do with MyCal?</h3>
-      MyCal is a Web App for creating custom photo calendars
+      <div>
+      <h2 className="mycal-design-caption" >MyCal Design</h2>
+      </div>
+      <div>
+      <p className="welcome-headline">What can you do with MyCal?</p>
+      MyCal is here for you for your custom photo calendar needs:
       <ul className="activity-list">
         <li>Choose your personalized calendar background image</li>
         <li>Mark dates important to you.</li>
         <li>Print your design</li>
         <li>Simply save it</li>
       </ul>
+      </div>
     </main>
     <nav>
        <Link className="personalize-link"to="/about">Personalize with MyCal</Link>
