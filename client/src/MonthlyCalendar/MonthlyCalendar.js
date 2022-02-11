@@ -1,7 +1,7 @@
 import React from 'react'
+import FilesUploadComponent from '../FilesUploadComponent/FilesUploadComponent'
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
 import './MonthlyCalendar.css'
-import FilesUploadComponent from '../FilesUploadComponent/FilesUploadComponent'
 
 const MonthlyCalendar = React.forwardRef((props, ref) => {
 

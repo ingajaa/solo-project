@@ -35,7 +35,11 @@ const FilesUploadComponent = () => {
                         <input type="file" className="actual-btn" onChange={onFileChange} />
                     </div>
                     {profileImg ?
-                        <img className="image-to-print" src={profileImg} alt="Your custom background displayed"></img>
+                        <img
+                        className="image-to-print"
+                        src={profileImg}
+                        alt="Your custom background displayed">
+                        </img>
                         : null}
                 </form>
             </div>
