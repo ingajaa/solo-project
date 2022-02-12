@@ -1,12 +1,17 @@
-# solo-project
-Web application for creating custom photo calendars.
-Project's tech stack includes React, Node with Express server and MongoDB Mongoose.
+MyCal Design
 
-To set up the app:
-1. run 'nodemon index.js' command from /server directory.
-2. start Mongo DB.
-3. run 'npm start' from /client folder directory.
-4. Run npm i from /server directory to install the dependencies:
+MyCal Design is a web application for creating custom photo calendars. User can print out or save their creation. Options to customize calendar months are adding their own image and marking in important personal dates.
+
+
+![](./ScreenShot.png)
+
+
+Project's tech stack includes React, Axios, Node with Express server, Multer and MongoDB Mongoose database.
+
+
+To start the app:
+
+1. Cd into 'server' directory and run 'npm i' to install the following dependencies:
 Express
 body-parser
 Cors
@@ -14,6 +19,14 @@ Mongoose
 multer
 uuid
 
-5. For front-end dependencies run 'npm i' command from /client directory
-to install the dependencies: @react-pdf/renderer @syncfusion/ej2-react-calendars axios react-to-print
+2. run 'nodemon index.js' command from /server directory to start the server.
+3. start Mongo DB.
+4. Cd into 'client' directory and run 'npm i' to install fron end dependencies:
+@react-pdf/renderer
+@syncfusion/ej2-react-calendars
+axios
+react-to-print
 
+5. run 'npm start' from /client directory.
+
+6. You're ready to enjoy MyCal!
