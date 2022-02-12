@@ -3,10 +3,10 @@ MyCal Design
 MyCal Design is a web application for creating custom photo calendars. User can print out or save their creation. Options to customize calendar months are adding their own image and marking in important personal dates.
 
 
-![](2022-02-11-18-54-37.png)
+![](./ScreenShot.png)
 
 
-Project's tech stack includes React, Node with Express server and MongoDB Mongoose database.
+Project's tech stack includes React, Axios, Node with Express server, Multer and MongoDB Mongoose database.
 
 
 To start the app:
